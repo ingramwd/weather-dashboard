@@ -1,0 +1,35 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.header-title {
+    color: white;
+    width: vw 100%;
+    height: vh 50%;
+    background-image: linear-gradient(to right, blue, #2A0D5D );
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#city-search {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.btn {
+    color: white;
+    background-color: skyblue;
+    margin-top: 10px;
+}
+
+.line {
+    border: 1px solid black;
+    width: 100%;
+}
