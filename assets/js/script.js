@@ -1,9 +1,16 @@
 // my api key f95df33b8a4b905edf0dbd58e095f0f3
+var submit = document.querySelector('.submit-btn')
+var citySearch = document.querySelector("#search-form");
+var userInputEl = document.querySelector("#user-input");
+var name = document.querySelector('.nme');
+var desc = document.querySelector('.desc');
+var temp = document.querySelector('.temp');
+
 
 var getWeatherData = function (input) {
 
     // formate openweathermap api url
-    var apiUrl = "api.openweathermap.org/data/2.5/weather?q=" + input + "&units=Imperial&appid=f95df33b8a4b905edf0dbd58e095f0f3";
+    var apiUrl = "api.openweathermap.org/data/2.5/weather?q=" + userInputEl.value + "&units=Imperial&appid=f95df33b8a4b905edf0dbd58e095f0f3";
 
     // make a request to the url
     fetch(apiUrl)
@@ -20,15 +27,14 @@ var getWeatherData = function (input) {
 
 };
 
-var citySearch = document.querySelector("#search-form");
-var userInputEl = document.querySelector("#user-input");
+
 
 var searching = function (event) {
     event.preventDefault();
     console.log(event)
 
 
-    var cityName = userInputEl.ariaValueMax.trim();
+    var cityName = userInputEl;
 
     if (cityName) {
         getWeatherData(cityName);
@@ -39,4 +45,4 @@ var searching = function (event) {
     }
 };
 
-userInputEl.addEventListener("submit", searching);
+citySearch.addEventListener("submit", searching);
