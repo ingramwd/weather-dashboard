@@ -17,6 +17,10 @@
     justify-content: flex-start;
 }
 
+#search-form {
+    float: left;
+}
+
 #city-search {
     display: flex;
     flex-direction: column;
@@ -32,4 +36,9 @@
 .line {
     border: 1px solid black;
     width: 100%;
+}
+
+.results {
+    border: black solid 1px ;
+ 
 }
