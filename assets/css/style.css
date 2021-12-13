@@ -38,7 +38,8 @@
     width: 100%;
 }
 
-.results {
+#current {
     border: black solid 1px ;
+    margin-top: 10px;
  
 }
